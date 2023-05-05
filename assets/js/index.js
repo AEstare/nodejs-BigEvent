@@ -38,18 +38,18 @@ function getUserInfo(){
         },
 
         // 不论成功还是失败都会调用complete回调函数
-        complete:function(res){
-            // console.log('执行了');
-            // console.log(res);
-            // 在complete回调函数中可以使用res.responseJSON获取服务器的响应信息
-            if(res.responseJSON.status===1&&res.responseJSON.message==='身份认证失败'){
-                // 1.强制清空本地存储的token
-                localStorage.removeItem('token')
-                // 2.重新跳转登录页
-                location.href='/nodejs/big_event/大事件项目/login.html'
-            }
+        // complete:function(res){
+        //     // console.log('执行了');
+        //     // console.log(res);
+        //     // 在complete回调函数中可以使用res.responseJSON获取服务器的响应信息
+        //     if(res.responseJSON.status===1&&res.responseJSON.message==='身份认证失败'){
+        //         // 1.强制清空本地存储的token
+        //         localStorage.removeItem('token')
+        //         // 2.重新跳转登录页
+        //         location.href='/nodejs/big_event/大事件项目/login.html'
+        //     }
             
-        }
+        // }
     })
 }
 
